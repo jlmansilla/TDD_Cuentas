@@ -36,3 +36,4 @@
 # end
 
 User.create(name: 'John', likes:1)
+Table.create(number: 1)
