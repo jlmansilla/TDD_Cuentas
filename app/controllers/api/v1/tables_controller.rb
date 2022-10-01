@@ -4,12 +4,16 @@ module Api
       # >> GET >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
       
       def show
+        authorize_user(TablePolicy)
+
         render json: Table.find(params[:id])
       end
       
       # >> POST >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
       
       def create
+        authorize_user(TablePolicy)
+
         table = Table.new(table_params)
 
         return render json: table, status: :created if table.save

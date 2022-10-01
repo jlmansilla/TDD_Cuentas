@@ -40,9 +40,13 @@ gem 'versionist', '~> 2.0', '>= 2.0.1'
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 gem "rack-cors"
 
+gem 'pundit', '~> 2.1.0'
+
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  #gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem "byebug"
   # TDD unit tests with rspec [https://github.com/rspec/rspec-metagem]
   gem "rspec"
   gem "rspec-rails"

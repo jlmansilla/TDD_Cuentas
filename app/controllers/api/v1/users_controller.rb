@@ -3,6 +3,7 @@ module Api
     class UsersController < ApiController
       # >> GET >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
         def index
+          authorize_user(UserPolicy)
           users = User.all 
           render json: users
         end
