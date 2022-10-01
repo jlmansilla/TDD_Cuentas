@@ -36,4 +36,5 @@
 # end
 
 User.create(name: 'John', likes:1)
-Table.create(number: 1)
+Table.create(number: 7)
+Meal.create([{name: 'Arroz'}, { name: 'Carne'}])
