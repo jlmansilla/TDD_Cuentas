@@ -6,9 +6,9 @@ class ApplicationController < ActionController::API
   def authorize_user(policy_class)
     authorize current_user, policy_class: policy_class
   end
-    
+
   def current_user
     # TODO: User faker for validations
-    User.first
-  end    
+    User.find(request.headers['CLIENT'])
+  end
 end

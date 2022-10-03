@@ -5,14 +5,14 @@ module Api
         rescue_from Pundit::NotAuthorizedError, with: :unauthorized
 
         private
-  
+
         def record_not_found(error)
           render json: { errors: [error] }, status: :not_found
         end
 
         def unauthorized
           head(:unauthorized)
-        end 
+        end
       end
     end
   end
