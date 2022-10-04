@@ -15,6 +15,8 @@
 # gem "pg"
 #
 default: &default
+  username: <%= ENV['USERNAME_BD'] %>
+  password: <%= ENV['PASSWORD_BD'] %>
   adapter: postgresql
   encoding: unicode
   username: <%= ENV['USERNAME_BD'] %>
