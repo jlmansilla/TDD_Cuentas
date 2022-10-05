@@ -1,5 +1,4 @@
 require 'rails_helper'
-require 'database_cleaner'
 
 describe User do
   context 'when create a user' do
